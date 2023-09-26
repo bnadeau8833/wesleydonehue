@@ -1,0 +1,66 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin-top: unset;
+	color: $primary;
+	font-family: $font_header;
+}
+
+
+h1, .h1 {
+	font-size: 50px;
+
+	@include media-breakpoint-up(md) {
+		font-size: 58px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: 65px;
+	}
+}
+
+h2, .h2 {
+	font-size: 35px;
+	@include media-breakpoint-up(sm) {
+		font-size: 39px;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 45px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 50px;
+	}
+}
+
+h3, .h3 {
+	font-size: 25px;
+
+	@include media-breakpoint-up(sm) {
+		font-size: 26px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: 29px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		font-size: 33px;
+	}
+}
+
+h4, .h4 {
+	font-size: 23px;
+	
+	@include media-breakpoint-up(md) {
+		font-size: 26px;
+	}
+}
+
+h5, .h5 {
+	font-size: 22px;
+}

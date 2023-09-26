@@ -1,0 +1,96 @@
+p {
+	margin-bottom: 1.5em;
+}
+
+.lead {
+	@include media-breakpoint-down(sm) {
+		font-size: 1.15rem;
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 0 1.5rem;
+	padding: 2rem 2.5rem;
+	background-color: $white;
+	font-size: 1.3rem;
+	border-left: 6px solid $primary;
+	position: relative;
+	overflow: hidden;
+
+	p:last-child {
+		margin-bottom: unset;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		font-family: "Font Awesome 6 Pro";
+		font-weight: bold;
+		@include opacity(0.0825);
+		z-index: 0;
+		color: $primary;
+		font-size: 10rem;
+		line-height: 1;
+	}
+
+	&:before {
+		left: 0;
+		top: 0;
+		content: "\f10d";
+	}
+
+	&:after {
+		right: 0;
+		bottom: 0;
+		content: "\f10e";
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $color__background-pre;
+	font-family: $font__pre;
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font__code;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

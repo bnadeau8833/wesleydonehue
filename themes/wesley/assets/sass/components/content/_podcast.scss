@@ -1,0 +1,55 @@
+.featured-post {
+  .episode.text-primary {
+    color: $secondary !important;
+  }
+}
+
+.bg-video-wrap {
+  position: relative;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include object-fit(cover);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+//Homepage Episodes Feed
+.episode-wrap {
+  .links-wrap {
+    a {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.type-episodes {
+  .accordion-item {
+    z-index: 9999;
+  }
+  .accordion-body {
+    background-color: $secondary;
+    z-index: 999;
+    position: relative;
+
+    .podcast-link {
+      .link-text {
+        color: $light;
+      }
+      &:hover {
+        color: $gray;
+        .link-text {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

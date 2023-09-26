@@ -1,0 +1,14 @@
+.gitattributes
+.gitignore
+themes/wesley/assets/sass/**
+themes/wesley/package-lock.json
+themes/wesley/package.json
+themes/wesley/ai1wm-backups/**
+themes/wesley/assets/media/.DS_Store
+plugins/**
+uploads/**
+themes/.DS_Store
+themes/twentytwentytwo/**
+themes/twentytwentyone/**
+plugins/.DS_Store
+.DS_Store

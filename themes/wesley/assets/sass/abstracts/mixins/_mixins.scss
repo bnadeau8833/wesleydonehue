@@ -1,0 +1,395 @@
+// White Images
+@mixin img-white {
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+
+/**
+ * Button Reset
+ *
+ */
+ @mixin button-reset() {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+/**
+ * Block Cover
+ * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
+ */
+@mixin block-cover() {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+/**
+ * Placeholder Color
+ *
+ */
+@mixin placeholder-color($color) {
+	::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+
+	::-ms-input-placeholder {
+		color: $color;
+	}
+
+	::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	input:focus::-webkit-input-placeholder,
+	input:focus::-moz-placeholder,
+	input:focus:-ms-input-placeholder,
+	textarea:focus::-webkit-input-placeholder,
+	textarea:focus::-moz-placeholder,
+	textarea:focus:-ms-input-placeholder {
+		color: transparent;
+	}
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null) {
+	-o-object-fit: $fit;
+	object-fit: $fit;
+
+	@if $position {
+		-o-object-position: $position;
+		object-position: $position;
+		font-family: "object-fit: #{$fit}; object-position: #{$position}";
+	} @else {
+		font-family: "object-fit: #{$fit}";
+	}
+}
+
+/// Shorthand mixin for offset positioning
+/// @param {String} $position - Either `relative`, `absolute` or `fixed`
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+@mixin position(
+	$position,
+	$top: null,
+	$right: null,
+	$bottom: null,
+	$left: null
+) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+//Opacity Colors
+@mixin opacity($value) {
+	$IEValue: $value * 100;
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $IEValue +
+		")";
+	filter: alpha(opacity=$IEValue);
+}
+
+//Word Wrap
+@mixin word-wrap() {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-word;
+	word-break: break-word;
+	word-break: break-word;
+}
+
+// Apperance
+@mixin appearance($apperance) {
+	-webkit-appearance: $apperance;
+	-moz-appearance: $apperance;
+	appearance: $apperance;
+}
+
+/*--------------------------------------------------------------
+## Blend Mode
+--------------------------------------------------------------*/
+// Mix Blend Mode
+// normal | multiply | screen | overlay | darken | lighten | color-dodge | hard-light | soft-light | difference | exlusion | hue | saturation | color | luminosity
+@mixin mix-blend-mode($blend_mode) {
+	mix-blend-mode: $blend_mode;
+}
+
+/*--------------------------------------------------------------
+## Transitions
+--------------------------------------------------------------*/
+@mixin transition($transition) {
+	-ms-transition: all $transition ease-in-out;
+	-o-transition: all $transition ease-in-out;
+	-moz-transition: all $transition ease-in-out;
+	-webkit-transition: all $transition ease-in-out;
+	transition: all $transition ease-in-out;
+}
+
+@mixin transition-fast {
+	-ms-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-webkit-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+@mixin transition-base {
+	-ms-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+
+@mixin transition-slow {
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-superslow {
+	-ms-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	-webkit-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+  ## Grid
+  --------------------------------------------------------------*/
+@mixin display-grid {
+	display: -ms-grid;
+	display: grid;
+}
+
+@mixin grid-child($col-start, $col-end, $row-start, $row-end) {
+	-ms-grid-column: $col-start;
+	-ms-grid-column-span: $col-end - $col-start;
+	-ms-grid-row: $row-start;
+	-ms-grid-row-span: $row-end - $row-start;
+	grid-column: #{$col-start}/#{$col-end};
+	grid-row: #{$row-start}/#{$row-end};
+}
+
+@supports (display: -ms-grid) {
+	/* This will apply in Edge (old syntax), but not IE 10 or 11 */
+}
+
+/*--------------------------------------------------------------
+  ## Preserve Style
+  --------------------------------------------------------------*/
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transform-style($style) {
+	-webkit-transform-style: $style;
+	-ms-transform-style: $style;
+	transform-style: $style;
+}
+
+/*--------------------------------------------------------------
+  ## Flex
+  --------------------------------------------------------------*/
+@mixin flex {
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+	display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin inline-flex {
+	// display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	// display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-inline-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-inline-flex; /* NEW - Chrome */
+	display: inline-flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+	-webkit-flex-direction: $direction;
+	-moz-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	-moz-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+	-webkit-flex-flow: $flow;
+	-moz-flex-flow: $flow;
+	-ms-flex-flow: $flow;
+	flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+	-webkit-box-ordinal-group: $val;
+	-moz-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow($grow) {
+	-webkit-flex-grow: $grow;
+	-moz-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink($shrink) {
+	-webkit-flex-shrink: $shrink;
+	-moz-flex-shrink: $shrink;
+	-ms-flex-shrink: $shrink;
+	flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+@mixin flex-basis($width) {
+	-webkit-flex-basis: $width;
+	-moz-flex-basis: $width;
+	-ms-flex-basis: $width;
+	flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify;
+	-moz-justify-content: $justify;
+	-ms-justify-content: $justify;
+	justify-content: $justify;
+	-ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+	-webkit-align-content: $align;
+	-moz-align-content: $align;
+	-ms-align-content: $align;
+	align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+	-webkit-align-items: $align;
+	-moz-align-items: $align;
+	-ms-align-items: $align;
+	-ms-flex-align: $align;
+	align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+	-webkit-align-self: $align;
+	-moz-align-self: $align;
+	-ms-align-self: $align;
+	align-self: $align;
+}
+
+/*--------------------------------------------------------------
+  ## Column Count
+  --------------------------------------------------------------*/
+// Column Count
+// 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+@mixin column-count($cols) {
+	-webkit-column-count: $cols;
+	-moz-column-count: $cols;
+	column-count: $cols;
+}
+
+@mixin column-gap($gap) {
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	column-gap: $gap;
+}
+
+/*--------------------------------------------------------------
+  ## List Columns
+  --------------------------------------------------------------*/
+@mixin list-col($col) {
+	-webkit-columns: $col;
+	-moz-columns: $col;
+	columns: $col;
+}
+
+// Mixin itself
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) -
+		(($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}

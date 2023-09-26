@@ -1,0 +1,125 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap5-2-0/functions";
+
+// 2. Include any default variable overrides here
+$primary: #ea4e3d; //red
+$secondary: #000000; //light blue
+$beige: #f9f8ef;
+$gray: #d9d9d9;
+$light: #f4f4f4;
+$gray_darker: #c4c4c4;
+$gray_darkest: #666666;
+$dark: #444A4D;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../bootstrap5-2-0/variables";
+
+// 4. Include any default map overrides here
+$extra-theme-colors: (
+  "gray": $gray,
+  "beige": $beige,
+  "gray-darker": $gray-darker,
+  "gray-darkest": $gray_darkest,
+);
+
+$extra-general-colors: ();
+
+$colors: map-merge($colors, $extra-general-colors);
+
+$theme-colors: map-merge($theme-colors, $extra-theme-colors);
+
+$enable-negative-margins: true;
+$enable-rounded: false;
+$lead-font-size: 1.25rem;
+
+//Cards
+$card-border-radius: 0;
+$card-border-width: 0;
+
+//Navbar
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-font-size: 2.25em;
+$navbar-nav-link-padding-x: 0.8rem;
+$navbar-light-color: $secondary;
+$navbar-padding-y: 0;
+
+//Buttons
+$btn-border-radius: 0;
+$btn-font-size-lg: 24px;
+$btn-padding-x-lg: 1.5rem;
+$btn-padding-y-lg: 0.25rem;
+$btn-border-width: 3.5px;
+
+//Accordion
+$accordion-button-focus-border-color: transparent;
+
+//Dropdowns
+$dropdown-dark-bg: $black;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4,
+  10: $spacer * 4.5,
+  11: $spacer * 5,
+  12: $spacer * 5.5,
+  13: $spacer * 6,
+  14: $spacer * 6.5,
+  15: $spacer * 7,
+);
+
+// 5. Include remainder of required parts
+@import "../bootstrap5-2-0/maps";
+@import "../bootstrap5-2-0/mixins";
+@import "../bootstrap5-2-0/root";
+
+// 6. Optionally include any other parts as needed
+@import "../bootstrap5-2-0/accordion";
+// @import "../bootstrap5-2-0/alert";
+// @import "../bootstrap5-2-0/badge";
+// @import "../bootstrap5-2-0/breadcrumb";
+@import "../bootstrap5-2-0/button-group";
+@import "../bootstrap5-2-0/buttons";
+@import "../bootstrap5-2-0/card";
+// @import "../bootstrap5-2-0/carousel";
+@import "../bootstrap5-2-0/close";
+@import "../bootstrap5-2-0/containers";
+@import "../bootstrap5-2-0/dropdown";
+@import "../bootstrap5-2-0/forms";
+@import "../bootstrap5-2-0/grid";
+@import "../bootstrap5-2-0/helpers";
+@import "../bootstrap5-2-0/images";
+@import "../bootstrap5-2-0/list-group";
+// @import "../bootstrap5-2-0/maps";
+@import "../bootstrap5-2-0/modal";
+@import "../bootstrap5-2-0/nav";
+@import "../bootstrap5-2-0/navbar";
+@import "../bootstrap5-2-0/offcanvas";
+@import "../bootstrap5-2-0/pagination";
+@import "../bootstrap5-2-0/placeholders";
+@import "../bootstrap5-2-0/popover";
+@import "../bootstrap5-2-0/progress";
+@import "../bootstrap5-2-0/reboot";
+// @import "../bootstrap5-2-0/spinners";
+// @import "../bootstrap5-2-0/tables";
+// @import "../bootstrap5-2-0/toasts";
+// @import "../bootstrap5-2-0/tooltip";
+@import "../bootstrap5-2-0/transitions";
+@import "../bootstrap5-2-0/type";
+@import "../bootstrap5-2-0/utilities";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../bootstrap5-2-0/utilities/api";
+
+// 8. Add additional custom code here

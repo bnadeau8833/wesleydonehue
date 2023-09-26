@@ -1,0 +1,143 @@
+.flex-section {
+  &.featured-feed {
+    a {
+      color: $white;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.blurb {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//Social media feed
+.flex-section.social-media {
+  ul.menu-social {
+    @include flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    
+    li {
+      margin-top: 1rem;
+
+      @include media-breakpoint-up(sm) {
+        min-width: 23%;
+      }
+    }
+    
+  }
+}
+
+ul.menu-social {
+  li a,
+  li i {
+    @include transition-base;
+  }
+
+  li a:hover {
+    i.text-white {
+      color: $primary !important;
+    }
+
+    i.fa-stack-1x {
+      color: $white !important;
+    }
+  }
+}
+
+
+//Post Feed
+.flex-section.post-feed {
+  .card-image-wrap {
+    border: 2px solid $light;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(md) {
+      margin-left: unset;
+    }
+    img {
+      height: 200px;
+    }
+  }
+
+  .recommendation {
+
+    @include media-breakpoint-down(md) {
+      margin: 1rem auto 0;
+    }
+  }
+
+  .card-body {
+    @include media-breakpoint-down(md) {
+      padding: 1rem 2rem !important;
+    }
+  }
+
+  .card {
+    .small {
+      font-size: 70% !important;
+    }
+  }
+
+  .row-cols-sm-2 {
+    .card .entry-title {
+      @include media-breakpoint-up(lg) {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+
+  .bg-secondary {
+    .card {
+      a {
+        color: $white;
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .entry-content,
+      .entry-footer {
+        display: none;
+      }
+
+      .entry-footer a {
+        color: $primary;
+      }
+    }//.card
+  }//.bg-secondary
+}//.post-feed
+
+
+//Podcast
+.flex-section.podcast {
+  .media-inner {
+    img {
+      @include media-breakpoint-down(sm) {
+        max-width: 160px;
+      }
+    }
+  }
+}
+
+//Episodes Carouesl from podcast module, took out incase it needs to be used later in other places
+.episodes-carousel {
+    .slick-slide {
+      margin: unset;
+    }
+}
+
+//Press 
+.flex-section.press {
+  .press-wrap {
+    img {
+      max-height: 60px;
+    }
+  }
+}

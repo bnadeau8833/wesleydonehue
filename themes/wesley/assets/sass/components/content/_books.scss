@@ -1,0 +1,42 @@
+.archive {
+    .card {
+        .recommendation {
+           margin-right: auto;
+        }
+    }
+}
+
+.card.type-reviews {
+    .card-link {
+        color: $secondary;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .recommendation {
+        @include media-breakpoint-down(sm) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.single-reviews {
+    .recommendation {
+        display: inline-block;
+        border: 2px solid $primary;
+        padding: 0.4rem 1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .entry-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+}

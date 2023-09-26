@@ -1,0 +1,60 @@
+.description {
+    h1, h2, h3, h4, h5, h6 {
+        color: $secondary;
+    }
+}
+
+.post-thumbnail {
+    .ratio {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+//Changing hover state on Podcast page to white so it's visible
+.page-banner {
+    &.overlay-secondary {
+        .title-link:hover {
+            color: $white;
+        }
+    }
+}
+
+//single template banner
+.banner-wrap {
+    .entry-header {
+        .short-title {
+            color: $primary;
+            font-size: 75%;
+        }
+    }
+}
+
+
+//Featured Post from Content Template
+.featured-post {
+    .image-col {
+        img {
+            @include media-breakpoint-down(md) {
+                height: 200px;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &.featured-episodes {
+        .title-link {
+            color: $light;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .entry-title {
+        @include media-breakpoint-down(md) {
+            font-size: 30px;
+        }
+    }
+}

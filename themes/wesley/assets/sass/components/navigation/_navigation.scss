@@ -1,0 +1,70 @@
+.navbar-nav {
+	font-size: 18px;
+
+	a.nav-link:visited {
+		color: $secondary;
+	}
+
+	a.nav-link:hover {
+		color: $primary;
+	}
+
+	.dropdown-menu {
+
+		text-align: center;
+
+		a {
+			&:hover {
+				background-color: $primary;
+				color: $white;
+			}
+		}
+	}
+
+	li.current-menu-item {
+		.nav-link {
+			color: $primary;
+		}
+	}
+}
+
+.navbar-expand {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		$next: breakpoint-next($breakpoint, $grid-breakpoints);
+		$infix: breakpoint-infix($next, $grid-breakpoints);
+
+		// stylelint-disable-next-line scss/selector-no-union-class-name
+		&#{$infix} {
+			@include media-breakpoint-down($next) {
+				.navbar-nav {
+					font-size: 1.35rem !important;
+					padding: 1rem;
+
+					li {
+						margin-bottom: 0.75rem;
+
+						&.current-menu-item {
+							a {
+								color: $primary;
+
+								&:hover {
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Toggler
+.navbar-toggler {
+	color: $gray_darkest;
+	&:hover {
+		color: $primary;
+	}
+}
+
+@import "content-navigation";

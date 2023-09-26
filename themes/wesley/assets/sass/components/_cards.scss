@@ -1,0 +1,108 @@
+.card {
+    .entry-content {
+        color: $secondary;
+    }
+
+    .card-image-wrap {
+        min-height: 45px;
+    }
+
+    .stars-wrap {
+        font-size: 75%;
+    }
+
+    .episode {
+        color: $primary;
+    }
+
+    .entry-footer {
+        width: 100%;
+
+        .cat-links,
+        .tags-links {
+
+            a:not(:last-child):after {
+               content: '|';
+               display: inline-block;
+               padding: 0.25rem 0.3rem 0.5rem 0.5rem;
+               color: $gray;
+            }
+
+            a {
+                color: $secondary;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }//.entry-footer
+
+    .entry-meta,
+    .entry-footer {
+        font-size: 75%;
+    }
+
+    .entry-content {
+        font-size: 75%;
+    }
+
+    .recommendation {
+        @include justify-content(flex-start);
+        font-size: 65%;
+        padding: 0.3rem 0.6rem;
+        border: 2px solid $primary;
+        font-weight: bolder;
+        margin-top: 1rem;
+    }
+}
+
+
+.blog,
+.archive {
+    .card {
+        .entry-title {
+            .card-link {
+                color: $secondary;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .short-title {
+                font-size: 80%;
+            }
+        }
+    }
+}
+
+//Content Template With the featured post and centered carousel
+.page-template-content-template {
+    .card {
+        .stars-wrap {
+            font-size: 90%;
+        }
+
+        .recommendation {
+            margin: 1.5rem auto 0;
+            font-size: 1.2rem;
+        }
+    }
+
+    .content-slider-wrap {
+        .entry-title {
+            a:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.related-posts {
+    .card {
+        .episode {
+            color: $secondary;
+        }
+    }
+}

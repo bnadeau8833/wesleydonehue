@@ -1,0 +1,183 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea {
+  color: $color__text-input;
+  border: 1px solid $color__border-input;
+  border-radius: 0;
+  padding: 6px;
+  background-color: $gray;
+
+  &:focus {
+    color: $color__text-input-focus;
+  }
+}
+
+.gform_wrapper {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  select,
+  textarea {
+    color: $color__text-input;
+    border: 1px solid $color__border-input;
+    border-radius: 0;
+    padding: 4px !important;
+    background-color: $gray;
+
+    &:focus {
+      color: $color__text-input-focus;
+    }
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"]
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  min-height: 42px !important;
+}
+
+select {
+  border: 1px solid $color__border-input;
+}
+
+textarea {
+  width: 100%;
+}
+
+.site-footer {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"]
+  select,
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    min-height: 35px !important;
+  }
+}
+
+.gform_wrapper .gform_fields {
+  @include align-items(flex-end);
+}
+
+//Gravity forms
+.gform_wrapper.gravity-theme .gform_footer,
+.gform_wrapper.gravity-theme .gform_page_footer {
+  padding: unset !important;
+  text-align: center;
+
+  input {
+    margin: 0 auto !important;
+  }
+}
+
+.gform-button.button {
+  padding: 0.32em 1em 0.32em;
+  font-size: 18px;
+  line-height: 1 !important;
+
+  @include media-breakpoint-down(md) {
+    margin: auto;
+  }
+}
+
+.gform_wrapper.gravity-theme .gfield_label {
+  margin-bottom: 0 !important;
+  font-weight: normal !important;
+}
+
+.bg-primary,
+.bg-secondary,
+.bg-black,
+.bg-dark {
+  .gform_wrapper.gravity-theme .gfield_label {
+    color: $white;
+  }
+
+  .gform_button.button:hover {
+    color: $white;
+  }
+}
+
+
+//Making name field fields always inline
+.gform_wrapper.gravity-theme {
+  .ginput_container_name.gf_name_has_2 {
+
+    span {
+      flex: 1;
+
+      &:first-child {
+        padding-right: 1%;
+      }
+
+      &:last-child {
+        padding-left: 1%;
+      }
+    }
+  }
+}
+
+//confirmation message 
+.gform_confirmation_message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: $primary;
+  line-height: 1.4;
+}

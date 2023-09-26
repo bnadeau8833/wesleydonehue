@@ -1,0 +1,1 @@
+wp.customize.controlConstructor["multi-check"]=wp.customize.Control.extend({ready:function(){"use strict";var t=this;t.container.on("change","input",(function(){var n=[],c=0;jQuery.each(t.params.choices,(function(e,i){t.container.find('input[value="'+e+'"]').is(":checked")&&(n[c]=e,c++)})),t.setting.set(n)}))}});

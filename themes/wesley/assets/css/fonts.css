@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'nexa-bold';
+    src: url('../fonts/nexa_bold-webfont.eot');
+    src: url('../fonts/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_bold-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_bold-webfont.woff') format('woff'),
+         url('../fonts/nexa_bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa-light';
+    src: url('../fonts/nexa_light-webfont.eot');
+    src: url('../fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_light-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_light-webfont.woff') format('woff'),
+         url('../fonts/nexa_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa-regular';
+    src: url('../fonts/nexa_regular-webfont.eot');
+    src: url('../fonts/nexa_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_regular-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_regular-webfont.woff') format('woff'),
+         url('../fonts/nexa_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'norwester-regular';
+    src: url('../fonts/norwester-webfont.eot');
+    src: url('../fonts/norwester-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/norwester-webfont.woff2') format('woff2'),
+         url('../fonts/norwester-webfont.woff') format('woff'),
+         url('../fonts/norwester-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+@font-face {
+    font-family: 'nexa-bold';
+    src: url('../fonts/nexa_bold-webfont.eot');
+    src: url('../fonts/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_bold-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_bold-webfont.woff') format('woff'),
+         url('../fonts/nexa_bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexa-lightuploaded_file';
+    src: url('../fonts/nexa_light-webfont.eot');
+    src: url('../fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_light-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_light-webfont.woff') format('woff'),
+         url('../fonts/nexa_light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nexaregularuploaded_file';
+    src: url('../fonts/nexa_regular-webfont.eot');
+    src: url('../fonts/nexa_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexa_regular-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_regular-webfont.woff') format('woff'),
+         url('../fonts/nexa_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'norwesterregular';
+    src: url('../fonts/norwester-webfont.eot');
+    src: url('../fonts/norwester-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/norwester-webfont.woff2') format('woff2'),
+         url('../fonts/norwester-webfont.woff') format('woff'),
+         url('../fonts/norwester-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/

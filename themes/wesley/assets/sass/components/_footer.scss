@@ -1,0 +1,15 @@
+.site-footer {
+    .menu-footer {
+        // padding-bottom: 0.5rem;
+        padding: 0 0.5rem 0.5rem;
+        a {
+            color: $gray_darkest;
+            font-size: 1rem;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}

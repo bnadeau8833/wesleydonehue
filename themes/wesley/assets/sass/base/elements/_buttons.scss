@@ -1,0 +1,90 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 3.5px solid;
+  border-color: $color__border-button;
+  border-radius: 0;
+  background: $color__background-button;
+  color: $white;
+  line-height: 1;
+  padding: 0.32em 1em 0.32em;
+  font-family: $font_header;
+
+  &:hover {
+    border-color: $color__border-button-hover;
+    background-color: transparent;
+    color: $secondary;
+    border-color: $primary;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color__border-button-focus;
+  }
+}
+
+.bg-secondary {
+  button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  &:hover {
+    color: $white;
+  }
+}
+}
+
+.btn.btn-primary {
+  color: $white;
+
+  &:hover {
+    background-color: transparent;
+    color: $secondary;
+  }
+}
+
+.bg-secondary {
+  .btn.btn-primary:hover {
+    color: $white;
+  }
+}
+
+.btn.btn-secondary {
+  color: $white;
+}
+
+.btn {
+  font-family: $font_header;
+}
+
+//Toggle button with moving chevron on archives in sidebar
+.btn-toggle {
+  font-size: 15px;
+
+  border: 0;
+  
+  &:focus,
+  &:hover {
+    border: 0;
+  }
+
+  &::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 700;
+    content: "\f054";
+    line-height: 0;
+    transition: transform .35s ease;
+    color: $primary;
+    width: 1.35em;
+  }
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}

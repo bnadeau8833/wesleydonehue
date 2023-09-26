@@ -1,0 +1,25 @@
+.swiper-pagination {
+    bottom: 20px;
+
+    .swiper-pagination-bullet {
+        @include opacity(0.35);
+        background-color: $primary;
+    }
+
+    .swiper-pagination-bullet-active {
+        @include opacity(1);
+    }
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 20px;
+}
+
+.bg-secondary {
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            background-color: $light;
+        }
+    }
+}

@@ -1,0 +1,219 @@
+.slick-slide {
+	@include transition-superslow;
+	margin: 0 1rem;
+}
+
+
+.slick-slider.slider-wrap {
+	.slick-list {
+		// margin-bottom: 2rem;
+		
+	}
+	.slick-track {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(space-between);
+	}
+}
+
+//Indicators
+.slick-dots {
+	position: relative;
+	bottom: 0;
+	margin-top: 1rem;
+	margin-left: 0;
+
+	li {
+		margin: 0 1px;
+		// @include flex;
+
+		button {
+			@include transition-base;
+			&::before {
+				color: $gray;
+				font-size: 12px;
+				@include opacity(0.55);
+			}
+
+			&:hover {
+				&::before {
+					@include transition-base;
+					@include opacity(1);
+					color: $dark;
+				}
+			}
+		}
+
+		//Active State
+		&.slick-active {
+			button::before {
+				color: $dark;
+				@include opacity(1);
+				font-size: 12.5px;
+			}
+		}
+	}
+}
+
+
+//Custom ones used some places
+.awesome-dots {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	
+	ul.slick-dots {
+		@include flex;
+		@include align-items(center);
+		@include justify-content(center);
+		position: relative;
+		bottom: 0;
+		margin-top: 0;
+	}
+}
+
+.bg-secondary {
+	.slick-dots li {
+		button::before {
+			color: $white;
+		}
+	}
+}
+
+//Arrows
+.slick-next,
+.slick-prev {
+	&:before {
+		color: $primary;
+	}
+}
+
+
+//Styling the Centered Mode carousel on content template
+.page-template-content-template {
+	
+	.slick-slider.centered-mode {
+		.slick-slide {
+			padding: 2rem 0 0;
+			@include opacity(0.4);
+			@include transform(scale(0.85));
+			margin: unset;
+		
+			.card {
+				background-color: $secondary;
+				z-index: 999999;
+				position: relative;
+
+				&::after {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 100;
+					content: "";
+					display: block;
+				}
+			}
+
+			.card-image-wrap {
+				border: 4px solid $gray_darker;
+
+				img {
+					max-height: 375px;
+				}
+			}
+
+			.link-secondary {
+				color: $primary !important;
+			}
+		
+			.entry-content,
+			.entry-footer {
+				color: #888;
+				font-size: 75%;
+
+				a {
+					color: $primary;
+				}
+			}
+		
+			.entry-content,
+			.entry-footer,
+			.recommendation {
+				visibility: hidden;
+			}
+		
+			.recommendation {
+				border-width: 1px !important;
+				color: $white !important;
+				font-size: 0.75em !important;
+				@include inline-flex;
+				@include justify-content(center);
+			}
+
+			&.slick-current.slick-active {
+				@include opacity(1);
+				z-index: 999999999999;
+				position: relative;
+				@include transform(scale(1));
+
+				.card {
+					@include transform(scale(1));
+
+					&::after {
+						display: none;
+					}
+				}
+
+				.card-image-wrap {
+					border: 3px solid $gray_darker;
+					@include transform(scale(1.1));
+					margin-bottom: 1rem;
+				}
+
+				.card-body {
+					color: $white;
+					padding-left: 0;
+					padding-right: 0;
+					width: 100%;
+				}
+
+				.entry-content,
+				.entry-footer,
+				.recommendation {
+					visibility: visible;
+				}
+
+				.entry-footer {
+					a {
+						color: $white !important;
+					}
+				}
+			}//.slick-current
+		}//slick-slide
+	}
+
+	.page-for-episodes {
+		.slick-slider.centered-mode .slick-slide .card-image-wrap img {
+			@include media-breakpoint-down(md) {
+				max-height: 190px;
+			}
+		}
+	}
+
+	.page-for-reviews {
+		.slick-slider.centered-mode .slick-slide {
+			.card-image-wrap img {
+				@include media-breakpoint-down(md) {
+					max-height: 210px;
+				}
+			}
+
+			.entry-title {
+				.card-link {
+					color: $white;
+				}
+			}
+		}
+	}
+}
